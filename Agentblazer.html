@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agentblazer Club Inauguration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    header img {
+      height: 80px;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 2rem;
+      color: #1d4ed8;
+    }
+    header p {
+      margin: 5px 0;
+      font-size: 1rem;
+      color: #555;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .stats div {
+      text-align: center;
+    }
+    .stats span {
+      display: block;
+      font-size: 1.6rem;
+      color: #dc2626;
+    }
+    section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #1f2937;
+    }
+    /* Speakers */
+    .speakers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #e5e7eb;
+      text-align: center;
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: bold;
+    }
+    /* Vision & Mission */
+    .vision-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .vision {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+    }
+    .vision span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+    /* Agenda Timeline */
+    .timeline {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 40px;
+      border-left: 3px solid #2563eb;
+    }
+    .event {
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 3px solid #2563eb;
+      border-radius: 50%;
+    }
+    .event h4 {
+      margin: 0;
+      font-size: 1rem;
+      color: #2563eb;
+    }
+    .event p {
+      margin: 3px 0 0;
+      color: #444;
+    }
+    /* Charts */
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    canvas {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+    .recognition {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg" alt="Logo">
+    <h1>Agentblazer Club • Inauguration Ceremony</h1>
+    <p>An initiative by the Office of Industry Alliances<br>In collaboration with Salesforce Global Workforce Development Team</p>
+    <p><strong>Inauguration Ceremony • August 5, 2025</strong></p>
+    <div class="stats">
+      <div><span>150+</span>Expected Attendees</div>
+      <div><span>8</span>Keynote Sessions</div>
+      <div><span>1</span>Pioneering Community</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Meet Our Speakers</h2>
+    <div class="speakers">
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ravi">
+        <h3>Ravi Tamada</h3>
+        <p>Solutions Architect, Cognizant</p>
+        <a href="#">LinkedIn Profile</a>
+      </div>
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Sidhartha">
+        <h3>Dr. Sidhartha Ghosh</h3>
+        <p>Director, Anurag University</p>
+        <a href="#">LinkedIn Profile</a>
+      </div>
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Vikas">
+        <h3>Vikas Bandaru</h3>
+        <p>Technical Manager, Anurag University</p>
+        <a href="#">LinkedIn Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Vision & Mission</h2>
+    <div class="vision-grid">
+      <div class="vision"><span>🚀</span><h4>Official Launch</h4><p>Formally introduce the club at AU.</p></div>
+      <div class="vision"><span>💡</span><h4>Inspire & Motivate</h4><p>Share insights & growth opportunities.</p></div>
+      <div class="vision"><span>🏆</span><h4>Showcase Talent</h4><p>Highlight achievements and projects.</p></div>
+      <div class="vision"><span>🤝</span><h4>Facilitate Networking</h4><p>Connect with peers and industry leaders.</p></div>
+      <div class="vision"><span>📘</span><h4>Outline Initiatives</h4><p>Launch programs & training.</p></div>
+      <div class="vision"><span>📢</span><h4>Generate Awareness</h4><p>Educate students on future careers.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The Inaugural Agenda</h2>
+    <div class="timeline">
+      <div class="event"><h4>09:15 AM</h4><p>Welcome Ceremony</p></div>
+      <div class="event"><h4>09:30 AM</h4><p>Opening & Networking</p></div>
+      <div class="event"><h4>10:00 AM</h4><p>Keynote Speech by Dr. Vijaya Kumar</p></div>
+      <div class="event"><h4>10:30 AM</h4><p>Welcome & Inaugural Speech</p></div>
+      <div class="event"><h4>11:00 AM</h4><p>Student Training Overview</p></div>
+      <div class="event"><h4>11:15 AM</h4><p>Introducing Student Leads</p></div>
+      <div class="event"><h4>11:30 AM</h4><p>Special Achievement Awards</p></div>
+      <div class="event"><h4>12:15 PM</h4><p>Project Expo & Networking</p></div>
+      <div class="event"><h4>12:30 PM</h4><p>Closing & Lunch</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Agentforce & Responsible AI?</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">Agentforce and Responsible AI are at the forefront of innovation. This chart highlights the key pillars shaping our future.</p>
+    <div class="charts">
+      <canvas id="pieChart1"></canvas>
+      <canvas id="pieChart2"></canvas>
+      <canvas id="lineChart"></canvas>
+    </div>
+  </section>
+
+  <section class="recognition">
+    <h2>Spotlight on Student Talent</h2>
+    <p>🏆 2 Major Recognitions awarded during inauguration</p>
+  </section>
+
+  <script>
+    // Chart 1
+    new Chart(document.getElementById('pieChart1'), {
+      type: 'pie',
+      data: {
+        labels: ['Ethics','AI Research','Innovation','Security','Safety'],
+        datasets: [{ data: [20,25,15,20,20], backgroundColor:['#3b82f6','#22c55e','#f97316','#f43f5e','#a855f7'] }]
+      }
+    });
+
+    // Chart 2
+    new Chart(document.getElementById('pieChart2'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Core AI','Workshops','Peer Learning'],
+        datasets: [{ data: [40,30,30], backgroundColor:['#10b981','#facc15','#ef4444'] }]
+      }
+    });
+
+    // Line Chart
+    new Chart(document.getElementById('lineChart'), {
+      type: 'line',
+      data: {
+        labels: ['2025','2026','2027','2028'],
+        datasets: [{
+          label: 'Expected Growth',
+          data: [50,120,200,300],
+          fill: true,
+          borderColor: '#2563eb',
+          backgroundColor: 'rgba(37,99,235,0.2)'
+        }]
+      }
+    });
+  </script>
+
+</body>
+</html>
